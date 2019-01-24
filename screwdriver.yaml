@@ -1,5 +1,5 @@
 shared:
-    image: gcc
+    image: tatsy/ubuntu-cxx:default
 
 jobs:
     main:
