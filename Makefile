@@ -6,7 +6,7 @@ cleanplatforms:
 	-rm -rf build
 
 build/CMakeCache.txt: CMakeLists.txt
-	mkdir $(@D); cd $(@D); cmake3 ..
+	mkdir $(@D); cd $(@D); cmake ..
 
 platforms: build/CMakeCache.txt
 	$(MAKE) -C build

@@ -6,6 +6,8 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - setup: |
-                apt-get update && apt-get install -y python3-pip
+                apt-get update
+                apt-get install -y cmake
+                apt-get install -y python3-pip
                 pip3 install gcovr
             - build: make cleanplatforms platforms testcoverageplatforms sonarcoverage
