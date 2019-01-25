@@ -7,8 +7,7 @@ jobs:
         steps:
             - setup: |
                 apt-get update
-                apt-get install -y cmake
-                apt-get install -y libgtest-dev
-                apt-get install -y python3-pip
+                apt-get install -y cmake libgtest-dev python3-pip
                 pip3 install gcovr
+                bash +x install-gtest.sh
             - build: make cleanplatforms platforms testcoverageplatforms sonarcoverage
