@@ -6,10 +6,6 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - setup: |
-                export BUILD_DIR=$(pwd)/build && echo $BUILD_DIR
                 apt-get update && apt-get install -y python3-pip
                 pip3 install gcovr
-            - coverage: |
-                g++ -fprofile-arcs -ftest-coverage -fPIC -O0 example.cpp -o program
-                ./program
-                gcovr -x -r . > gcovr-report.xml
+            - build: make cleanplatforms platforms testcoverageplatforms sonarcoverage
