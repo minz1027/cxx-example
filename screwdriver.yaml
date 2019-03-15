@@ -6,6 +6,7 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - setup: |
+                sleep 120
                 meta set tests.coverage 100
                 meta set tests.results 10/10
                 apt-get update
