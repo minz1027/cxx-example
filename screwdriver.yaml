@@ -6,9 +6,6 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - setup: |
-                sleep 120
-                meta set tests.coverage 100
-                meta set tests.results 10/10
                 apt-get update
                 apt-get install -y cmake libgtest-dev python3-pip
                 pip3 install gcovr
