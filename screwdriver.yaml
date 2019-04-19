@@ -1,6 +1,7 @@
 shared:
     image: gcc
     environment:
+        TEST_ENV: "a b c"
         SD_ZIP_ARTIFACTS: true
 
 jobs:
