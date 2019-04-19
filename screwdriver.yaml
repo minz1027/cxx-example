@@ -1,5 +1,7 @@
 shared:
     image: gcc
+    environment:
+        SD_ZIP_ARTIFACTS: true
 
 jobs:
     main:
