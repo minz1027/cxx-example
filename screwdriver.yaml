@@ -10,6 +10,7 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - setup: |
+                cp $SD_META_PATH $SD_ARTIFACTS_DIR
                 apt-get update
                 apt-get install -y cmake libgtest-dev python3-pip
                 pip3 install gcovr
