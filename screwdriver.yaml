@@ -3,6 +3,7 @@ shared:
     environment:
         TEST_ENV: "a b c"
         SD_ZIP_ARTIFACTS: true
+        SD_SONAR_OPTS: '-Dsonar.projectVersion=abc --Dsonar.projectVersion=cdf'
 
 jobs:
     main:
