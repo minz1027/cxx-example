@@ -2,6 +2,7 @@ shared:
     image: gcc
     environment:
         TEST_ENV: "a b c"
+        SD_SONAR_OPTS: '-Dsonar.projectVersion=$SD_PULL_REQUEST'
 
 jobs:
     main:
