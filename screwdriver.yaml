@@ -2,7 +2,7 @@ shared:
     image: gcc
     environment:
         TEST_ENV: "a b c"
-        SD_SONAR_OPTS: '-Dsonar.projectVersion=$SD_BUILD_ID'
+        SD_SONAR_OPTS: '-Dsonar.projectVersion=abc -Dsonar.projectVersion=$SD_BUILD_ID'
 
 jobs:
     main:
