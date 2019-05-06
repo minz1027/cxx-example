@@ -6,8 +6,7 @@ shared:
 
 jobs:
     main:
-        annotations:
-            blockedBy: [~sd@967:main]
+        blockedBy: [~sd@967:main]
         requires: [~pr, ~commit]
         steps:
             - setup: |
