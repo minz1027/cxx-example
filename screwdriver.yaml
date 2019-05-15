@@ -6,8 +6,7 @@ shared:
 
 jobs:
     main:
-        blockedBy: [~sd@967:main]
-        requires: [~pr, ~commit]
+        requires: [~pr, ~commit, ~sd@371:detached]
         steps:
             - setup: |
                 meta get commit.author
