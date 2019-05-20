@@ -8,6 +8,7 @@ jobs:
     main:
         requires: [~pr, ~commit, ~sd@371:detached]
         steps:
+            - exit: exit 0
             - setup: |
                 meta get commit.author
                 cp $SD_META_PATH $SD_ARTIFACTS_DIR
