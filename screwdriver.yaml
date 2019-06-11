@@ -1,3 +1,7 @@
+childPipelines:
+   scmUrls:
+      - git@github.com:minz1027/waffle.git
+
 shared:
     image: gcc
     environment:
