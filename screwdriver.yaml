@@ -12,6 +12,7 @@ jobs:
     main:
         requires: [~pr, ~commit, ~sd@371:detached]
         steps:
+            - echo-new: echo new
             - env: env
             - setup: |
                 meta get commit.author
